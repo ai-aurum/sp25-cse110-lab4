@@ -1,6 +1,6 @@
 function sumValues(num1, num2, add) {
 	if (add) {
-		let result = 0;
+		const result = 0;
 		result = num1 + num2;
 		console.log('values added: ', result);
 	} else return;
