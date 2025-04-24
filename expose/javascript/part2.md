@@ -51,3 +51,38 @@ B. `student['Grad Year']` \
 C. `student.greeting()` \
 D. `student['Favorite Teacher'].name` \
 E. `student.courseLoad[0]`
+
+## Question 13
+
+A. Output: `'32'`. The environment sees the `+` operator and a string and an integer on either side. It prioritizes the conversion of the integer to a string, and thus concatenates `'3'` and `'2'` to make `'32'`
+
+B. Output: `1`. The environment see the `-` operator, and thus ensures both operands are numbers or, in this case, integers. We perform `3 - 2` which is `1`.
+
+C. Output: `3`. The environment sees the `+` operator, an integer operand, and a `null`. It converts `null` to the integer `0`, and performs `3 + 0` which is `3`.
+
+D. Output: `'3null'`. The environment sees the `+` operator and at least one string as an operand, treating the operation as concatenation. This converts `null` to `'null'` and performs `'3' + 'null' = '3null'`.
+
+E. Output: `4`. The environment treats the operator as addition and converts `true` to `1`, performing `1 + 3 = 4`.
+
+F. Output: `0`. The environment defaults to integer operation, converting both `false` and `null` to `0`, performing `0 + 0 = 0`
+
+G. Output: `'3undefined'`. Because one of the operands is a string, and the operator is `+`, we perform concatention and convert `undefined` to a string.
+
+H. Output: `NaN`. The `undefined` keyword becomes `NaN` with operations other than `+`, and `'3' - 'NaN'` produces an string error, resulting in `NaN` as the output.
+
+## Question 14
+
+A. Output: `true`. The `'2'` string converts into an integer, and `2 > 1` is a true statement.
+
+B. Output: `false`. We perform string comparisons by lexicographical order. Since `'2'` comes after `'1'`, the statement is false.
+
+C. Output: `true`. We convert `'2'` to the integer `2`. The statement `2 == 2` is true.
+
+D. Output: `false`. We perform a strict equality operation. Since our operands are different types (string and integer), we return false.
+
+E. Output: `false`. We convert `true` to the integer `1`. The statement `1 == 2` is false.
+
+F. Output: `true`. We explicitly convert the integer `2` into the boolean `true` since it is non-zero. Thus, `true === true` is true.
+
+## Question 15
+The difference between the regular equality operator `==` and the stric equality operator `===` is that the former perfroms type conversions, while the latter does not. Once the strict equality sees that it is comparing two operands of different types, it automatically returns false. However, with regular equality, it may perform type conversions and the result may end up being true.
