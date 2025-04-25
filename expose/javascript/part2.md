@@ -86,3 +86,6 @@ F. Output: `true`. We explicitly convert the integer `2` into the boolean `true`
 
 ## Question 15
 The difference between the regular equality operator `==` and the stric equality operator `===` is that the former perfroms type conversions, while the latter does not. Once the strict equality sees that it is comparing two operands of different types, it automatically returns false. However, with regular equality, it may perform type conversions and the result may end up being true.
+
+## Question 16
+*Solution in part2-question16.js*
