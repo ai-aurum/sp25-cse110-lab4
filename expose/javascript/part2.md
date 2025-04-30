@@ -85,7 +85,21 @@ E. Output: `false`. We convert `true` to the integer `1`. The statement `1 == 2`
 F. Output: `true`. We explicitly convert the integer `2` into the boolean `true` since it is non-zero. Thus, `true === true` is true.
 
 ## Question 15
+
 The difference between the regular equality operator `==` and the stric equality operator `===` is that the former perfroms type conversions, while the latter does not. Once the strict equality sees that it is comparing two operands of different types, it automatically returns false. However, with regular equality, it may perform type conversions and the result may end up being true.
 
 ## Question 16
+
 *Solution in part2-question16.js*
+
+## Question 17
+
+The result of `modifyArray([1,2,3], doSomething)` is a new array with double the values of the original: `[2, 4, 6]`. In the `modifyArray` function, first we create a new array `newArr`. Then in a for loop, we iterate through each entry in the array, and pass it as an argument into the `doSomething` function. This doubles the value and returns the result, and then pushes the value into the `newArr`. Finally, the function returns this array of double values.
+
+## Question 18
+
+*Solution in part2-question18.js*
+
+## Question 19
+
+The output of the code is `1 4 3 2`. The 1 and 4 get printed out immediately, since they are on the original callstack. Then, 3 prints out immediatly after, and then 2 gets printed after 1 second.
